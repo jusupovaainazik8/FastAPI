@@ -1,6 +1,6 @@
 from pydantic import BaseModel, EmailStr
 from typing import Optional
-from .models import StatusChoices
+from .models import StatusAllChoices
 from datetime import date,datetime
 
 
@@ -22,7 +22,7 @@ class UserProfileOutSchema(BaseModel):
     email: EmailStr
     age: Optional[int]
     phone_number: Optional[str]
-    status: StatusChoices
+    status: StatusAllChoices
     date_register:date
 
 class CategoryInputSchema(BaseModel):
